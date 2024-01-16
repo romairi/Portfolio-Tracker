@@ -1,0 +1,23 @@
+module.exports = {
+  extends: ['airbnb', 'airbnb/hooks'],
+  parserOptions: {
+    ecmaVersion: 2021,
+  },
+  rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/react-in-jsx-scope': 'off',
+    'linebreak-style': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'no-undef': 'off',
+    'import/order': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'default-param-last': 'off',
+    'react/forbid-prop-types': 'off',
+    'react/prop-types': 'off',
+    'max-len': ['error', { code: 105, tabWidth: 4, ignoreComments: true }],
+  },
+};

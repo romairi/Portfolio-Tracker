@@ -1,0 +1,60 @@
+.box-modal {
+  display: block;
+  width: 650px;
+  height: 500px;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+  padding: 10px 20px;
+  overflow-y: auto;
+
+  .box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: -webkit-fill-available;
+    padding: 10px;
+
+    .title-modal {
+      font-size: 30px;
+    }
+
+    .stock-name-modal {
+      margin-bottom: 10px;
+    }
+
+    .stock-group-btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .stock-btn {
+        margin: 15px 10px 15px 0;
+        text-transform: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .add-purchase {
+      display: flex;
+      align-items: center;
+
+      .add-btn-purchase-stock {
+        font-size: 18px;
+      }
+
+      .span-name-stock {
+        font-size: 18px;
+      }
+    }
+  }
+}

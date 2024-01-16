@@ -1,0 +1,16 @@
+.toolbar-home {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+
+  .portfolio-list-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 42px;
+    color: #1976d2;
+  }
+}

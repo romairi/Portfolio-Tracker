@@ -1,0 +1,15 @@
+.switch-btn-chart {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .switch-btn {
+    // padding: 5px 10px;
+    padding: 0;
+    width: 40px;
+    height: 25px;
+  }
+
+  .chart-icon {
+    font-size: 25px;
+  }
+}

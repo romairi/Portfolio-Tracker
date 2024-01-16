@@ -1,0 +1,11 @@
+.pie-charts-sector-industry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .show-pie-chart-btn {
+    display: flex;
+    align-self: flex-end;
+    text-transform: none;
+    width: 150px;
+  }
+}

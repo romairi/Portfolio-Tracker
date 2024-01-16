@@ -1,0 +1,1 @@
+COOKIE_MAX_AGE = 86400  # 24h

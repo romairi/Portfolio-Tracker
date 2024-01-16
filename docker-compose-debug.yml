@@ -1,0 +1,40 @@
+version: '3.5'
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile
+    environment:
+      - PORT=${PORT}
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    ports:
+      - "${WEB_EXTERNAL_PORT}:${PORT}"
+    restart: always
+    volumes:
+      - ./web:/usr/src/app
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - mysql:/var/lib/mysql
+      - mysql_config:/etc/mysql
+      - ./sql_backup:/usr/backup
+    restart: always
+    ports:
+      - "3307:3306"
+
+
+volumes:
+  mysql:
+  mysql_config:

@@ -1,0 +1,96 @@
+version: '3.5'
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile
+    environment:
+      - PORT=${PORT}
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MICROSERVICE_AUTH_HOST=auth_microservice:${PORT}
+      - DEBUG=true
+    ports:
+      - "${WEB_EXTERNAL_PORT}:${PORT}"
+      - "8889:8889"
+      - "5678:5678"
+    networks:
+      - default
+    restart: always
+    volumes:
+      - ./web:/usr/src/app
+    depends_on:
+      - mysql
+    command: python -m debugpy --listen 0.0.0.0:5678 main.py
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - mysql:/var/lib/mysql
+      - mysql_config:/etc/mysql
+      - ./sql_backup:/usr/backup
+    restart: always
+    ports:
+      - "3307:3306"
+
+  auth_microservice:
+    build:
+      context: ./auth-microservice
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=${PORT}
+      - MONGO_USERNAME=${MONGO_USERNAME}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_DATABASE=${MONGO_INITDB_DATABASE}
+      - MONGO_HOST=mongo
+    restart: always
+    depends_on:
+      - mongo
+
+  # MONGO
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_USERNAME=${MONGO_USERNAME}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - mongodbdata:/data/db
+    ports:
+      - "27017:27017"
+
+  # Cron workers 
+  workers:
+    build:
+      context: ./web
+      dockerfile: ./Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ./web:/usr/src/app
+    restart: always
+    depends_on:
+      - mysql
+    command: python worker_runner.py
+
+
+volumes:
+  mysql:
+  mysql_config:
+  mongodbdata:

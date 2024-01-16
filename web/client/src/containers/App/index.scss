@@ -1,0 +1,26 @@
+@import "../../style/variables.scss";
+
+.app {
+  height: 100vh;
+  width: 100%;
+  background-color: $color-gray;
+
+  .content {
+    margin: 20px 50px;
+    padding: 20px 50px;
+
+    @media screen and (max-width: $max-xs) {
+      margin: 0;
+      padding: 10px;
+    }
+  }
+
+  .section {
+    padding: 30px 50px;
+    margin-bottom: 20px;
+
+    // &:last-of-type {
+    //     margin-bottom: 0;
+    // }
+  }
+}

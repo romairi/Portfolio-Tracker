@@ -1,0 +1,38 @@
+.gain-component {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .percentage-gain {
+    display: inline-flex;
+    margin-left: 5px;
+    padding: 3px 8px 3px 3px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  &.positive-gain {
+    color: rgb(19, 115, 51);
+
+    .percentage-gain {
+      background-color: rgb(230,244,234);
+
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &.negative-gain {
+    color: rgb(165,14,14);;
+
+    .percentage-gain {
+      background-color: rgb(252,232,230);
+
+
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

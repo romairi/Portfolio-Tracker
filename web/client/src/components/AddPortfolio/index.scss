@@ -1,0 +1,48 @@
+.add-portfolio {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .span-portfolio-title {
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: none;
+    margin-right: 20px;
+  }
+
+  .add-portfolio-btn {
+    .add-portfolio-icon {
+      font-size: 45px;
+    }
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .MuiFormControl-root.MuiTextField-root.portfolio-textfield {
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-group-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    .modal-save-btn {
+      text-transform: none;
+      font-size: 20px;
+      padding: 0 25px 0 25px;
+    }
+
+    .modal-cancel-btn {
+      text-transform: none;
+      background-color: #e7e7e7;
+      color: black;
+      font-size: 20px;
+    }
+  }
+}

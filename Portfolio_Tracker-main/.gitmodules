@@ -1,0 +1,3 @@
+[submodule "auth-microservice"]
+	path = auth-microservice
+	url = https://github.com/romairi/auth-microservice.git

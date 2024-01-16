@@ -1,0 +1,81 @@
+.portfolio-stock {
+  .portfolio-stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .portfolio-stock-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    .add-stock-btn {
+      .add-stock-icon {
+        font-size: 45px;
+      }
+    }
+  }
+}
+
+.portfolio-stock-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 200px;
+  min-height: 300px;
+  max-width: 800px;
+  background: white;
+  border-radius: 5px;
+
+  .portfolio-stock-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    .portfolio-stock-name {
+      display: flex;
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      line-height: 2rem;
+      font-size: 2.5rem;
+      letter-spacing: 0;
+      font-weight: 400;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .portfolio-stock-heading {
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      line-height: 1.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.00625em;
+      font-weight: 500;
+      color: rgb(60, 64, 67);
+      margin-top: 50px;
+    }
+
+    .portfolio-stock-note {
+      font-family: Roboto, Arial, sans-serif;
+      line-height: 1.25rem;
+      font-size: 0.875rem;
+      letter-spacing: 0.0178571429em;
+      font-weight: 500;
+      color: rgb(128, 134, 139);
+      margin: 10px 0;
+    }
+
+    .new-add-stock-btn {
+      color: var(--gm-fillbutton-ink-color, #fff);
+      background-color: var(--gm-fillbutton-container-color, rgb(26, 115, 232));
+      margin-top: 20px;
+      padding: 8px 11px;
+      .new-add-stock-icon {
+        font-size: 30px;
+      }
+      .new-investment-btn-name {
+        margin-left: 11px;
+        text-transform: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+title fetch data
+
+actor user
+entity server
+
+database redis
+database SQL
+
+entity worker
+entity yf
+
+
+user -> server: get_stock_data
+server ->redis: get_stock_data
+redis -->server: no_catch
+
+server -> SQL: get_stock_data
+SQL -->server: data
+
+server->redis: save data in the cache
+server --> user: data
+
+
+loop 1h
+
+worker ->SQL: get all symbols
+SQL --> worker: list of symbols
+
+worker ->yf: fetch data
+yf -->worker: data
+
+worker -> SQL: save data
+
+
+end

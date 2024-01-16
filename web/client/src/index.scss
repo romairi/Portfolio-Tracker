@@ -1,0 +1,45 @@
+@import "./style/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $color-gray;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-gray;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+div, p, span {
+  font-size: $base-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 5px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@each $element, $font-size in $font-sizes {
+  #{$element} {
+    font-size: $font-size;
+  }
+}

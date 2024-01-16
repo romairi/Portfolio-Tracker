@@ -1,0 +1,265 @@
+[
+    {
+        "name": "Dividends",
+        "stocks": [
+            {
+                "symbol": "ABBV",
+                "transactions": [
+                    {
+                        "Date": "10/25/21",
+                        "Shares": 3.0,
+                        "Price": 108.83,
+                        "Cost": 326.49,
+                        "Currency": "USD",
+                        "Exchange": 3.2,
+                        "totalGain": 37.56
+                    }
+                  
+                ],
+                "price": 149.7033,
+                "shortName": "AbbVie Inc.",
+                "longName": "AbbVie Inc.",
+                "quantity": 5.0,
+                "value": 748.5165000000001,
+                "cost": 585.4200000000001,
+                "totalGain": 27.86,
+                "sector": "Healthcare",
+                "industry": "Drug Manufacturers - General"
+            },
+            {
+                "symbol": "BMY",
+                "transactions": [
+                    {
+                        "Date": "10/22/21",
+                        "Shares": 10.0,
+                        "Price": 57.59,
+                        "Cost": 575.9,
+                        "Currency": "USD",
+                        "Exchange": 3.21,
+                        "totalGain": 19.12
+                    }
+                ],
+                "price": 68.6,
+                "shortName": "Bristol-Myers Squibb Company",
+                "longName": "Bristol-Myers Squibb Company",
+                "quantity": 10.0,
+                "value": 686.0,
+                "cost": 575.9,
+                "totalGain": 19.12,
+                "sector": "Healthcare",
+                "industry": "Drug Manufacturers - General"
+            },
+            {
+                "symbol": "FNF",
+                "transactions": [
+                    {
+                        "Date": "10/28/21",
+                        "Shares": 3.0,
+                        "Price": 48.02,
+                        "Cost": 144.06,
+                        "Currency": "USD",
+                        "Exchange": 3.16,
+                        "totalGain": -3.46
+                    }
+                ],
+                "price": 46.36,
+                "shortName": "FNF Group of Fidelity National ",
+                "longName": "Fidelity National Financial, Inc.",
+                "quantity": 3.0,
+                "value": 139.07999999999998,
+                "cost": 144.06,
+                "totalGain": -3.46,
+                "sector": "Financial Services",
+                "industry": "Insurance - Specialty"
+            },
+            {
+                "symbol": "JNJ",
+                "transactions": [
+                    {
+                        "Date": "11/12/21",
+                        "Shares": 2.0,
+                        "Price": 167.92,
+                        "Cost": 335.84,
+                        "Currency": "USD",
+                        "Exchange": 3.1,
+                        "totalGain": 1.45
+                    }
+                ],
+                "price": 170.36,
+                "shortName": "Johnson & Johnson",
+                "longName": "Johnson & Johnson",
+                "quantity": 2.0,
+                "value": 340.72,
+                "cost": 335.84,
+                "totalGain": 1.45,
+                "sector": "Healthcare",
+                "industry": "Drug Manufacturers - General"
+            },
+            {
+                "symbol": "LMT",
+                "transactions": [
+                    {
+                        "Date": "10/27/21",
+                        "Shares": 1.0,
+                        "Price": 334.28,
+                        "Cost": 334.28,
+                        "Currency": "USD",
+                        "Exchange": 3.19,
+                        "totalGain": 41.7
+                    }
+                ],
+                "price": 473.67,
+                "shortName": "Lockheed Martin Corporation",
+                "longName": "Lockheed Martin Corporation",
+                "quantity": 1.0,
+                "value": 473.67,
+                "cost": 334.28,
+                "totalGain": 41.7,
+                "sector": "Industrials",
+                "industry": "Aerospace & Defense"
+            },
+            {
+                "symbol": "MED",
+                "transactions": [
+                    {
+                        "Date": "10/25/21",
+                        "Shares": 1.0,
+                        "Price": 205.6,
+                        "Cost": 205.6,
+                        "Currency": "USD",
+                        "Exchange": 3.2,
+                        "totalGain": -11.48
+                    },
+                    {
+                        "Date": "12/2/21",
+                        "Shares": 1.0,
+                        "Price": 202.3,
+                        "Cost": 202.3,
+                        "Currency": "USD",
+                        "Exchange": 3.16,
+                        "totalGain": -10.03
+                    }
+                ],
+                "price": 182,
+                "shortName": "MEDIFAST INC",
+                "longName": "Medifast, Inc.",
+                "quantity": 2.0,
+                "value": 364.0,
+                "cost": 407.9,
+                "totalGain": -10.76,
+                "sector": "Consumer Cyclical",
+                "industry": "Personal Services"
+            },
+            {
+                "symbol": "MPW",
+                "transactions": [
+                    {
+                        "Date": "10/22/21",
+                        "Shares": 19.0,
+                        "Price": 20.72,
+                        "Cost": 393.68,
+                        "Currency": "USD",
+                        "Exchange": 3.21,
+                        "totalGain": -1.3
+                    }
+                ],
+                "price": 20.45,
+                "shortName": "Medical Properties Trust, Inc.",
+                "longName": "Medical Properties Trust, Inc.",
+                "quantity": 19.0,
+                "value": 388.55,
+                "cost": 393.68,
+                "totalGain": -1.3,
+                "sector": "Real Estate",
+                "industry": "REIT - Healthcare Facilities"
+            },
+            {
+                "symbol": "O",
+                "transactions": [
+                    {
+                        "Date": "10/25/21",
+                        "Shares": 3.0,
+                        "Price": 74.4,
+                        "Cost": 223.2,
+                        "Currency": "USD",
+                        "Exchange": 3.2,
+                        "totalGain": -12.14
+                    },
+                    {
+                        "Date": "12/2/21",
+                        "Shares": 1.0,
+                        "Price": 67.63,
+                        "Cost": 67.63,
+                        "Currency": "USD",
+                        "Exchange": 3.16,
+                        "totalGain": -3.34
+                    },
+                    {
+                        "Date": "12/4/21",
+                        "Shares": 1.0,
+                        "Price": 67.08,
+                        "Cost": 67.08,
+                        "Currency": "USD",
+                        "Exchange": 3.16,
+                        "totalGain": -2.55
+                    }
+                ],
+                "price": 65.37,
+                "shortName": "Realty Income Corporation",
+                "longName": "Realty Income Corporation",
+                "quantity": 5.0,
+                "value": 326.85,
+                "cost": 357.90999999999997,
+                "totalGain": -8.68,
+                "sector": "Real Estate",
+                "industry": "REIT - Retail"
+            },
+            {
+                "symbol": "PEBO",
+                "transactions": [
+                    {
+                        "Date": "10/25/21",
+                        "Shares": 9.0,
+                        "Price": 33.26,
+                        "Cost": 299.34,
+                        "Currency": "USD",
+                        "Exchange": 3.2,
+                        "totalGain": -3.73
+                    }
+                ],
+                "price": 32.02,
+                "shortName": "Peoples Bancorp Inc.",
+                "longName": "Peoples Bancorp Inc.",
+                "quantity": 9.0,
+                "value": 288.18,
+                "cost": 299.34,
+                "totalGain": -3.73,
+                "sector": "Financial Services",
+                "industry": "Banks - Regional"
+            },
+            {
+                "symbol": "PFE",
+                "transactions": [
+                    {
+                        "Date": "11/12/21",
+                        "Shares": 6.0,
+                        "Price": 50.13,
+                        "Cost": 300.78,
+                        "Currency": "USD",
+                        "Exchange": 3.1,
+                        "totalGain": -2.87
+                    }
+                ],
+                "price": 48.69,
+                "shortName": "Pfizer, Inc.",
+                "longName": "Pfizer Inc.",
+                "quantity": 6.0,
+                "value": 292.14,
+                "cost": 300.78,
+                "totalGain": -2.87,
+                "sector": "Healthcare",
+                "industry": "Drug Manufacturers - General"
+            }
+        ]
+    }
+]

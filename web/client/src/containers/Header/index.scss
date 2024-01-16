@@ -1,0 +1,21 @@
+.header-group-buttons {
+  display: contents;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-link {
+    color: #C2E0FF;;
+    text-decoration: none;
+
+    &.selected {
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+      border-radius: 33px;
+      padding: 10px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

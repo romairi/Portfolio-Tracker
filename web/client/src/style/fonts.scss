@@ -1,0 +1,16 @@
+$font-h1: 40px;
+$font-h2: 30px;
+$font-h3: 26px;
+$font-h4: 22px;
+$font-h5: 16px;
+$font-h6: 12px;
+$base-font-size: 18px;
+
+$font-sizes: (
+        "h1": $font-h1,
+        "h2": $font-h2,
+        "h3": $font-h3,
+        "h4": $font-h4,
+        "h5": $font-h5,
+        "h6": $font-h6,
+);
